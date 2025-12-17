@@ -5,8 +5,8 @@ import { useState, useRef } from "react";
 const testimonials = [
   {
     heading: "A Truly Unforgettable Experience",
-    quote: "“TravelCo planned our entire trip flawlessly. Every moment felt special.”",
-    text: "From the moment we landed to the final drop-off, TravelCo's service was exceptional. Our guide was incredibly knowledgeable, and the transport was extremely comfortable.",
+    quote: "“Avora Odyssey planned our entire trip flawlessly. Every moment felt special.”",
+    text: "From the moment we landed to the final drop-off, Avora Odyssey's service was exceptional. Our guide was incredibly knowledgeable, and the transport was extremely comfortable.",
     name: "– Jonathan Perera",
   },
   {
@@ -18,7 +18,7 @@ const testimonials = [
   {
     heading: "Best Tour Experience in Sri Lanka",
     quote: "“They exceeded our expectations. Worth every cent.”",
-    text: "Amazing guides, clean vehicles, and a perfectly planned tour. TravelCo provides a premium travel experience.",
+    text: "Amazing guides, clean vehicles, and a perfectly planned tour. Avora Odyssey provides a premium travel experience.",
     name: "– David Anderson",
   }
 ];

@@ -8,7 +8,7 @@ export default function TermsPage() {
       <nav className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <a href="/" className="text-2xl font-bold text-gray-900">
-            TravelCo
+            Avora Odyssey
           </a>
         </div>
       </nav>
@@ -39,7 +39,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-700 mb-4">
-              By accessing and using TravelCo's services, you agree to be bound by these Terms and Conditions. 
+              By accessing and using Avora Odyssey's services, you agree to be bound by these Terms and Conditions. 
               If you do not agree with any part of these terms, you must not use our services.
             </p>
           </section>
@@ -90,7 +90,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Travel Insurance</h2>
             <p className="text-gray-700 mb-4">
               We strongly recommend that all travelers purchase comprehensive travel insurance. 
-              TravelCo is not responsible for any losses, accidents, damages, injuries, or delays 
+              Avora Odyssey is not responsible for any losses, accidents, damages, injuries, or delays 
               that may occur during your trip.
             </p>
           </section>
@@ -98,7 +98,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Liability Limitations</h2>
             <p className="text-gray-700 mb-4">
-              TravelCo acts as an intermediary between travelers and service providers. We are not 
+              Avora Odyssey acts as an intermediary between travelers and service providers. We are not 
               liable for any acts, omissions, or negligence of third-party service providers including 
               airlines, hotels, transportation companies, or tour guides.
             </p>
@@ -117,7 +117,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Travel Documents</h2>
             <p className="text-gray-700 mb-4">
               It is the traveler's responsibility to ensure they have valid passports, visas, and 
-              other required travel documents. TravelCo is not responsible for any denial of entry 
+              other required travel documents. Avora Odyssey is not responsible for any denial of entry 
               or transit due to improper documentation.
             </p>
           </section>
@@ -133,8 +133,8 @@ export default function TermsPage() {
           <div className="mt-12 pt-8 border-t border-gray-200">
             <p className="text-gray-600 text-sm">
               For any questions regarding these Terms & Conditions, please contact us at 
-              <a href="mailto:legal@travelco.com" className="text-blue-600 hover:text-blue-800 ml-1">
-                legal@travelco.com
+              <a href="mailto:legal@Avora Odyssey.com" className="text-blue-600 hover:text-blue-800 ml-1">
+                legal@Avora Odyssey.com
               </a>
             </p>
           </div>

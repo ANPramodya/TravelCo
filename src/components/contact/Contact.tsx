@@ -85,23 +85,23 @@ export default function Contact() {
 
     try {
       // Create email subject with clear identifier
-      const subject = `📧 TRAVELCO CONTACT FORM: ${formData.name} - ${new Date().toLocaleDateString()}`;
+      const subject = `📧 Avora Odyssey CONTACT FORM: ${formData.name} - ${new Date().toLocaleDateString()}`;
       
       // Create email body
       const body = `
-New Contact Form Submission from TravelCo Website:
+New Contact Form Submission from Avora Odyssey Website:
 
 Name: ${formData.name}
 Email: ${formData.email}
 Message: ${formData.message}
 
 ---
-Sent from: TravelCo Website Contact Form
+Sent from: Avora Odyssey Website Contact Form
 Timestamp: ${new Date().toLocaleString()}
       `.trim();
 
       // Use mailto link as a fallback (works without backend)
-      const mailtoLink = `mailto:anpramodya@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:hello@avoraodyssey.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       
       // Open email client
       window.location.href = mailtoLink;
@@ -157,7 +157,7 @@ Timestamp: ${new Date().toLocaleString()}
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email Us</h3>
-                    <p className="text-gray-600">anpramodya@gmail.com</p>
+                    <p className="text-gray-600">hello@avoraodyssey.com</p>
                   </div>
                 </div>
 
@@ -309,7 +309,7 @@ Timestamp: ${new Date().toLocaleString()}
                     <p className="font-medium">{submitMessage}</p>
                     {submitMessage.includes("📧") && (
                       <p className="text-sm mt-2 text-green-600">
-                        Email subject will be: <span className="font-mono">"📧 TRAVELCO CONTACT FORM: [Your Name]"</span>
+                        Email subject will be: <span className="font-mono">"📧 Avora Odyssey CONTACT FORM: [Your Name]"</span>
                       </p>
                     )}
                   </div>

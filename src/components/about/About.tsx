@@ -45,7 +45,7 @@ export default function About() {
               Explore.<br />Experience.<br />Remember.
             </h2>
             <p className="text-gray-700 text-base lg:text-lg xl:text-xl leading-relaxed">
-              TravelCo is your gateway to unforgettable journeys in Sri Lanka. We specialize in crafting personalized travel experiences that showcase the island's rich culture, breathtaking landscapes, and warm hospitality.
+              Avora Odyssey is your gateway to unforgettable journeys in Sri Lanka. We specialize in crafting personalized travel experiences that showcase the island's rich culture, breathtaking landscapes, and warm hospitality.
             </p>
             <ul className="space-y-3 lg:space-y-4 text-gray-700 text-base lg:text-lg">
               <li className="flex items-start">

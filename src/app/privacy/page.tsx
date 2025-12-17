@@ -8,7 +8,7 @@ export default function PrivacyPage() {
       <nav className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <a href="/" className="text-2xl font-bold text-gray-900">
-            TravelCo
+            Avora Odyssey
           </a>
         </div>
       </nav>
@@ -164,7 +164,7 @@ export default function PrivacyPage() {
               <li>Withdraw consent at any time</li>
             </ul>
             <p className="text-gray-700 mt-4">
-              To exercise these rights, contact us at privacy@travelco.com
+              To exercise these rights, contact us at privacy@Avora Odyssey.com
             </p>
           </section>
 
@@ -184,7 +184,7 @@ export default function PrivacyPage() {
                   For privacy-related inquiries, contact our Data Protection Officer:
                 </p>
                 <p className="text-gray-900 font-medium">
-                  privacy@travelco.com
+                  privacy@Avora Odyssey.com
                 </p>
               </div>
               <div className="text-sm text-gray-500">

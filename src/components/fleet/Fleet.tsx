@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const faqs = [
   {
-    q: "What types of vehicles are in the TravelCo fleet?",
+    q: "What types of vehicles are in the Avora Odyssey fleet?",
     a: "Our fleet includes luxury buses, modern vans, comfortable SUVs, and cars—each maintained to the highest standards.",
   },
   {
@@ -53,7 +53,7 @@ export default function Fleet() {
         {/* Description */}
         <p className="text-center text-gray-700 max-w-5xl mx-auto mb-32 leading-relaxed text-lg">
           With professionally trained drivers, modern and well-maintained vehicles,
-          and a strong emphasis on comfort and safety, TravelCo ensures smooth
+          and a strong emphasis on comfort and safety, Avora Odyssey ensures smooth
           transportation for every part of your journey. Whether you're traveling
           as a couple or a large group, we provide reliable options tailored to
           your needs.
@@ -75,7 +75,7 @@ export default function Fleet() {
               >
                 <Image
                   src="/fleet/fleet.jpeg"
-                  alt="TravelCo Fleet"
+                  alt="Avora Odyssey Fleet"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"

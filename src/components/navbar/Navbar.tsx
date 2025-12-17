@@ -14,13 +14,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to scroll to section smoothly
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Close mobile menu if open
       setOpen(false);
-      // Smooth scroll to section
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
@@ -28,7 +25,6 @@ export default function Navbar() {
     }
   };
 
-  // Function to scroll to top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -36,7 +32,6 @@ export default function Navbar() {
     });
   };
 
-  // Only include the requested sections
   const menuLinks = [
     { name: "Packages", href: "packages" },
     { name: "FAQ", href: "faq" },
@@ -46,19 +41,19 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-400 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/70 text-white backdrop-blur-md shadow-lg"
+          ? "bg-black/20 backdrop-blur-md shadow-lg text-white"
           : "bg-transparent text-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo - Click to scroll to top */}
+        {/* Logo with Lovers Quarrel font */}
         <button
           onClick={scrollToTop}
-          className="text-2xl font-bold hover:text-gray-300 transition-colors duration-200 cursor-pointer"
+          className="text-6xl font-lovers hover:text-gray-300 transition-colors duration-200 cursor-pointer text-white"
         >
-          TravelCo
+          Avora Odyssey
         </button>
 
         {/* Desktop Menu */}
@@ -67,7 +62,7 @@ export default function Navbar() {
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="hover:text-gray-300 transition-colors duration-200 cursor-pointer"
+              className="hover:text-gray-300 transition-colors duration-200 cursor-pointer hover:scale-105 text-white"
             >
               {link.name}
             </button>
@@ -76,10 +71,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-3xl"
+          className="md:hidden text-3xl text-white"
           onClick={() => setOpen(!open)}
         >
-          &#9776;
+          {open ? "×" : "☰"}
         </button>
       </div>
 
@@ -91,13 +86,13 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black/90 text-white shadow-lg px-6 py-4 space-y-4"
+            className="md:hidden bg-black/80 backdrop-blur-sm text-white shadow-lg px-6 py-4 space-y-4"
           >
             {menuLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block text-lg font-medium hover:text-gray-300 transition-colors duration-200 w-full text-left cursor-pointer"
+                className="block text-lg font-medium hover:text-gray-300 transition-colors duration-200 w-full text-left cursor-pointer py-2"
               >
                 {link.name}
               </button>

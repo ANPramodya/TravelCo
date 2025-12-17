@@ -72,7 +72,7 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
           >
-            Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">TravelCo</span>
+            Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Avora Odyssey</span>
           </motion.h2>
           
           <motion.p
