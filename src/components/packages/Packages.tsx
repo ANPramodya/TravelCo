@@ -16,6 +16,9 @@ export default function Packages() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
 
+  // Take only first 6 packages
+  const featuredPackages = packagesData.slice(0, 6);
+
   return (
     <section ref={containerRef} id="packages" className="relative py-24 lg:py-32 overflow-hidden min-h-screen">
       {/* Background Image with Parallax */}
@@ -61,9 +64,9 @@ export default function Packages() {
           </motion.p>
         </div>
 
-        {/* Cards Grid */}
+        {/* Cards Grid - Show only first 6 packages */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {packagesData.map((pkg, i) => (
+          {featuredPackages.map((pkg, i) => (
             <Link href={`/packages/${pkg.id}`} key={pkg.id}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -94,22 +97,26 @@ export default function Packages() {
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
                   
-                  {/* Content Overlay */}
-                  <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end text-white">
-                    <div className="transform transition-transform duration-300 group-hover:-translate-y-2">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-8 h-0.5 bg-white/50"></div>
-                        <span className="text-sm font-medium text-white/80">{pkg.days}</span>
+                  {/* Content Overlay - All left aligned at bottom */}
+                  <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
+                    <div className="transform transition-all duration-300 group-hover:-translate-y-4">
+                      {/* Title */}
+                      <h3 className="text-2xl lg:text-3xl font-bold mb-3 text-white">{pkg.title}</h3>
+                      
+                      {/* Days - with subtle divider line */}
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-0.5 bg-white/60"></div>
+                        <span className="text-sm font-medium text-white/90">{pkg.days}</span>
                       </div>
                       
-                      <h3 className="text-2xl lg:text-3xl font-bold mb-2">{pkg.title}</h3>
-                      <p className="text-white/80 text-lg mb-6">{pkg.subtitle}</p>
-                      
-                      <div className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
-                        Explore Package
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+                      {/* Explore Button - Hidden until hover */}
+                      <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <div className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+                          Explore Package
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -122,7 +129,7 @@ export default function Packages() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA - Updated to link to a full packages page */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -130,12 +137,14 @@ export default function Packages() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12 lg:mt-16"
         >
-          <button className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:shadow-lg text-lg">
-            View All Packages
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
+          <Link href="/all-packages"> {/* Create this page if needed */}
+            <button className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:shadow-lg text-lg">
+              View All Packages ({packagesData.length})
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>

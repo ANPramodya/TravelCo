@@ -93,7 +93,7 @@ export default function Testimonials() {
           {/* Left Arrow - LARGER CLICKABLE AREA */}
           <button
             onClick={prev}
-            className="absolute left-0 md:left-[-80px] z-10 p-4 hover:bg-white/10 rounded-full transition-all duration-200"
+            className="absolute left-0 md:left-[-80px] z-10 p-4 hover:bg-white/10 rounded-full transition-all duration-200 cursor-pointer"
             aria-label="Previous testimonial"
           >
             <div className="flex items-center justify-center w-12 h-12">
@@ -147,7 +147,7 @@ export default function Testimonials() {
           {/* Right Arrow - LARGER CLICKABLE AREA */}
           <button
             onClick={next}
-            className="absolute right-0 md:right-[-80px] z-10 p-4 hover:bg-white/10 rounded-full transition-all duration-200"
+            className="absolute right-0 md:right-[-80px] z-10 p-4 hover:bg-white/10 rounded-full transition-all duration-200 cursor-pointer"
             aria-label="Next testimonial"
           >
             <div className="flex items-center justify-center w-12 h-12">

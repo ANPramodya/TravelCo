@@ -95,7 +95,7 @@ function Accordion({ q, a }: { q: string; a: string }) {
       {/* Question */}
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center p-6 text-left text-xl font-semibold text-gray-900 hover:bg-gray-50 transition-colors duration-200"
+        className="w-full flex justify-between items-center p-6 text-left text-xl font-semibold text-gray-900 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
       >
         <span className="pr-4">{q}</span>
         <motion.span 
