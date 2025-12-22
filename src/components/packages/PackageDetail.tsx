@@ -22,6 +22,31 @@ export default function PackageDetail({ packageData }: PackageDetailProps) {
     }
   };
 
+  // FIXED: Optimized animation variants with proper TypeScript types
+  const contentVariants = {
+  collapsed: { 
+    opacity: 0,
+    height: 0,
+    transition: { 
+      duration: 0.2,
+      ease: "easeInOut" as const
+    }
+  },
+  expanded: { 
+    opacity: 1,
+    height: "auto",
+    transition: { 
+      duration: 0.3,
+      ease: "easeInOut" as const
+    }
+  }
+};
+
+  const arrowVariants = {
+    collapsed: { rotate: 0 },
+    expanded: { rotate: 180 }
+  };
+
   return (
     <main className="pt-0">
       {/* Banner Image - Full height touching top */}
@@ -90,14 +115,13 @@ export default function PackageDetail({ packageData }: PackageDetailProps) {
           </h2>
           
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-            {/* Left Column - Itinerary (50% width) */}
+            {/* Left Column - Itinerary (50% width) - OPTIMIZED */}
             <div className="lg:w-1/2">
-              <div className="space-y-4">
+              <div className="space-y-4 will-change-transform">
                 {packageData.itinerary.map((day) => (
-                  <motion.div
+                  <div
                     key={day.day}
-                    layout
-                    className={`rounded-2xl overflow-hidden border transition-all duration-300 ${
+                    className={`rounded-2xl overflow-hidden border transition-colors duration-200 ${
                       expandedDay === day.day 
                         ? 'border-blue-300 bg-blue-50 shadow-lg' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
@@ -105,25 +129,27 @@ export default function PackageDetail({ packageData }: PackageDetailProps) {
                   >
                     <button
                       onClick={() => toggleDay(day.day)}
-                      className="w-full p-6 text-left"
+                      className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-2xl"
                     >
                       <div className="flex justify-between items-center">
-                        <div>
-                          <h3 className="text-xl font-semibold text-gray-900">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-xl font-semibold text-gray-900 truncate">
                             Day {day.day}: {day.title}
                           </h3>
-                          <p className={`text-sm mt-1 ${
+                          <p className={`text-sm mt-1 truncate ${
                             expandedDay === day.day ? 'text-blue-600' : 'text-gray-500'
                           }`}>
                             {expandedDay === day.day ? 'Click to collapse' : 'Click to expand'}
                           </p>
                         </div>
                         
-                        {/* Minimalist Arrow - Like Fleet component */}
+                        {/* Optimized Arrow Animation */}
                         <motion.div
-                          animate={{ rotate: expandedDay === day.day ? 180 : 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="text-gray-500"
+                          variants={arrowVariants}
+                          initial="collapsed"
+                          animate={expandedDay === day.day ? "expanded" : "collapsed"}
+                          transition={{ duration: 0.2, ease: "easeInOut" }}
+                          className="flex-shrink-0 ml-4 text-gray-500"
                         >
                           <svg 
                             width="20" 
@@ -145,65 +171,71 @@ export default function PackageDetail({ packageData }: PackageDetailProps) {
                       </div>
                     </button>
                     
-                    <AnimatePresence>
+                    {/* FIXED: Optimized Content Animation with proper types */}
+                    <AnimatePresence initial={false}>
                       {expandedDay === day.day && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="px-6 pb-6"
+                          key={`content-${day.day}`}
+                          variants={contentVariants}
+                          initial="collapsed"
+                          animate="expanded"
+                          exit="collapsed"
+                          className="overflow-hidden"
+                          style={{ willChange: 'height, opacity' }}
                         >
-                          <div className="pr-4">
-                            <p className="text-gray-700 leading-relaxed border-l-2 border-blue-400 pl-4 py-2">
-                              {day.description}
-                            </p>
+                          <div className="px-6 pb-6 pt-2">
+                            <div className="pr-4">
+                              <p className="text-gray-700 leading-relaxed border-l-2 border-blue-400 pl-4 py-2">
+                                {day.description}
+                              </p>
+                            </div>
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
-            {/* Right Column - Map (50% width) - Simplified */}
-<div className="lg:w-1/2">
-  <div className="sticky top-24">
-    <div className="bg-white rounded-2xl shadow-lg h-full">
-      <h3 className="text-xl font-bold text-gray-900 mb-4 px-6 pt-6">
-        Journey Route
-      </h3>
-      
-      {/* Enlarged Map Container */}
-      <div className="relative px-6 pb-6">
-        <div className="relative rounded-xl overflow-hidden"
-             style={{ height: '600px' }}>
-          {packageData.mapImage ? (
-            <div className="relative w-full h-full">
-              <Image
-                src={packageData.mapImage}
-                alt={`${packageData.title} Journey Route`}
-                fill
-                className="object-contain rounded-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority={false}
-              />
-            </div>
-          ) : (
-            <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center rounded-lg">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🗺️</div>
-                <p className="text-gray-600 font-medium text-xl mb-2">Route Map</p>
-                <p className="text-gray-500">Interactive journey visualization</p>
+            {/* Right Column - Map (50% width) - FIXED: Rounded borders */}
+            <div className="lg:w-1/2">
+              <div className="sticky top-24">
+                <div className="bg-white rounded-2xl shadow-lg h-full overflow-hidden">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 px-6 pt-6">
+                    Journey Route
+                  </h3>
+                  
+                  {/* Enlarged Map Container with proper rounded corners */}
+                  <div className="relative px-6 pb-6">
+                    <div className="relative overflow-hidden rounded-2xl"
+                         style={{ height: '600px' }}>
+                      {packageData.mapImage ? (
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={packageData.mapImage}
+                            alt={`${packageData.title} Journey Route`}
+                            fill
+                            className="object-contain "
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority={false}
+                            style={{ borderRadius: '16px' }}
+                          />
+                        </div>
+                      ) : (
+                        <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-6xl mb-4">🗺️</div>
+                            <p className="text-gray-600 font-medium text-xl mb-2">Route Map</p>
+                            <p className="text-gray-500">Interactive journey visualization</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          )}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
           </div>
         </div>
       </section>
