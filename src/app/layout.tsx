@@ -1,30 +1,23 @@
-"use client";
-
 import "./globals.css";
-import { useEffect } from "react";
-import Lenis from '@studio-freight/lenis';
 import Navbar from "@/components/navbar/Navbar";
+import LenisProvider from "@/components/LenisProvider";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  verification: {
+    google: "PHPe_JC_e6faIHnnxiyOs0x-7hk5aYz3dE4guIWq5Po",
+  },
+};
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="bg-white text-gray-900">
-        <Navbar/>
+        <LenisProvider />
+        <Navbar />
         {children}
       </body>
     </html>
