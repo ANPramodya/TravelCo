@@ -44,8 +44,8 @@ export const packagesData: Package[] = [
     title: "Cross Country and Down South",
     subtitle: "WildLife and Beach",
     days: "12 Days | 11 Nights",
-    image: "/packages/kandy.jpg",
-    bannerImage: "/packages/kandy-banner.jpg",
+    image: "/packages/coconut-tree-hill.jpg",
+    bannerImage: "/packages/arugambay_beach.jpg",
     caption: "Explore the Wild life and Beaches from East to West",
     description: "This 12-day beach tour explores Sri Lanka’s southern and western coastline, combining relaxation, coastal towns, marine life, and colonial heritage. Perfect for travelers seeking sun, sea, and slow-paced exploration.",
     category: 'Beach',
@@ -181,10 +181,10 @@ export const packagesData: Package[] = [
 
     ],
     gallery: [
-      "/packages/gallery/kandy1.jpg",
-      "/packages/gallery/kandy2.jpg",
-      "/packages/gallery/kandy3.jpg",
-      "/packages/gallery/kandy4.jpg"
+      "/packages/gallery/coconut-tree-hill.jpg",
+      "/packages/gallery/galle-fort-night.jpg",
+      "/packages/gallery/yala-safari.jpg",
+      "/packages/gallery/galle-fort-bird.jpg"
     ],
     inclusions: [
       "Airport transfers in private vehicle",
@@ -336,7 +336,7 @@ export const packagesData: Package[] = [
       "/packages/gallery/kandy1.jpg",
       "/packages/gallery/kandy2.jpg",
       "/packages/gallery/kandy3.jpg",
-      "/packages/gallery/kandy4.jpg"
+      "/packages/gallery/sigiriya.jpg"
     ],
     inclusions: [
       "Airport transfers in a private air-conditioned vehicle",
@@ -368,8 +368,8 @@ export const packagesData: Package[] = [
     title: "Ultimate Sri Lanka Wildlife & Beach Expedition",
     subtitle: "From National Parks to Pristine Coastlines",
     days: "17 Days | 16 Nights",
-    image: "/packages/kandy.jpg",
-    bannerImage: "/packages/kandy-banner.jpg",
+    image: "/packages/leopard-wildlife.jpg",
+    bannerImage: "/packages/yala-leopard.jpg",
     caption: "A complete journey through Sri Lanka’s wildlife sanctuaries, rainforests, and beaches",
     description: "This immersive 17-day Sri Lanka wildlife tour takes you across the island’s most famous national parks, rich rainforests, and tranquil beaches. Witness leopards, elephants, rare birds, and marine life while enjoying scenic landscapes and relaxing coastal stays. Ideal for nature lovers seeking the most comprehensive wildlife experience in Sri Lanka.",
     category: 'Wildlife',
@@ -479,10 +479,10 @@ export const packagesData: Package[] = [
       },
     ],
     gallery: [
-       "/packages/gallery/kandy1.jpg",
-      "/packages/gallery/kandy2.jpg",
-      "/packages/gallery/kandy3.jpg",
-      "/packages/gallery/kandy4.jpg"
+       "/packages/gallery/peacock.jpg",
+      "/packages/gallery/ella-train.jpg",
+      "/packages/gallery/leopard.jpg",
+      "/packages/gallery/pinnawala.jpg"
     ],
     inclusions: [
       "Airport transfers in private vehicle",
@@ -514,8 +514,8 @@ export const packagesData: Package[] = [
     title: "Ultimate Sri Lanka Adventure Circuit",
     subtitle: "Hikes, Rivers, Safaris & Ocean Adventures",
     days: "15 Days | 14 Nights",
-    image: "/packages/kandy.jpg",
-    bannerImage: "/packages/kandy-banner.jpg",
+    image: "/packages/ella-train3.jpg",
+    bannerImage: "/packages/mirissa-surfing.jpg",
     caption: "A thrilling island-wide adventure for adrenaline seekers",
     description: "This 15-day Sri Lanka adventure tour combines hiking, rafting, safaris, scenic train rides, diving, and beach time. Designed for active travelers, this journey showcases the island’s most exciting landscapes and outdoor experiences.",
     category: 'Adventure',
@@ -613,10 +613,10 @@ export const packagesData: Package[] = [
       },
     ],
     gallery: [
-      "/packages/gallery/kandy1.jpg",
-      "/packages/gallery/kandy2.jpg",
-      "/packages/gallery/kandy3.jpg",
-      "/packages/gallery/kandy4.jpg"
+      "/packages/gallery/waterfall.jpg",
+      "/packages/gallery/surfing.jpg",
+      "/packages/gallery/ella-train2.jpg",
+      "/packages/gallery/surfing2.jpg"
     ],
     inclusions: [
       "Airport transfers in private vehicle",
@@ -648,8 +648,8 @@ export const packagesData: Package[] = [
     title: "Grand Sri Lanka Family Discovery Tour",
     subtitle: "A Relaxed Two-Week Journey for All Ages",
     days: "19 Days | 18 Nights",
-    image: "/packages/kandy.jpg",
-    bannerImage: "/packages/kandy-banner.jpg",
+    image: "/packages/pinnawala.jpg",
+    bannerImage: "/packages/family-hotel.jpg",
     caption: "Create unforgettable family memories across Sri Lanka",
     description: "A carefully paced family tour covering wildlife, culture, hill country, and beaches. Designed for comfort, safety, and shared experiences across generations.",
     category: 'Family',
@@ -772,9 +772,9 @@ export const packagesData: Package[] = [
     ],
     gallery: [
       "/packages/gallery/kandy1.jpg",
-      "/packages/gallery/kandy2.jpg",
-      "/packages/gallery/kandy3.jpg",
-      "/packages/gallery/kandy4.jpg"
+      "/packages/gallery/ella-train4.jpg",
+      "/packages/gallery/sigiriya2.jpg",
+      "/packages/gallery/safari.jpg"
     ],
     inclusions: [
       "Airport transfers in private vehicle",
@@ -806,8 +806,8 @@ export const packagesData: Package[] = [
     title: "Explore Down South",
     subtitle: "From South to West",
     days: "10 Days | 9 Nights",
-    image: "/packages/kandy.jpg",
-    bannerImage: "/packages/kandy-banner.jpg",
+    image: "/packages/galle-birds-eye.jpg",
+    bannerImage: "/packages/tangalle.jpg",
     caption: "Experiance the Southern Beaches of Sri Lanka",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Beach',
@@ -875,10 +875,10 @@ export const packagesData: Package[] = [
       }
     ],
     gallery: [
-      "/packages/gallery/kandy1.jpg",
-      "/packages/gallery/kandy2.jpg",
-      "/packages/gallery/kandy3.jpg",
-      "/packages/gallery/kandy4.jpg"
+      "/packages/gallery/corals.jpg",
+      "/packages/gallery/coconut-tree.jpg",
+      "/packages/gallery/mirissa2.jpg",
+      "/packages/gallery/galle2.jpg"
     ],
     inclusions: [
       "Airport transfers in private vehicle",
