@@ -811,7 +811,7 @@ export const packagesData: Package[] = [
     caption: "Experiance the Southern Beaches of Sri Lanka",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Beach',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/beach_2.png",
     itinerary: [
       {
         day: 1,
@@ -908,7 +908,7 @@ export const packagesData: Package[] = [
     caption: "Explore all the beaches in Sri Lanka",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Beach',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/beach_3.png",
     itinerary: [
       {
         day: 1,
@@ -1028,7 +1028,7 @@ export const packagesData: Package[] = [
     caption: "Whole Sri Lanka in one Journey",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Culture',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/cultural_2.png",
     itinerary: [
       {
         day: 1,
@@ -1163,7 +1163,7 @@ export const packagesData: Package[] = [
     caption: "Experience mmost of it in a short time",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Culture',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/cultural_3.png",
     itinerary: [
       {
         day: 1,
@@ -1236,7 +1236,7 @@ export const packagesData: Package[] = [
     caption: "Experience the Chilling Hills of a Tropical Country",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Adventure',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/adventure_2.png",
     itinerary: [
       {
         day: 1,
@@ -1315,7 +1315,7 @@ export const packagesData: Package[] = [
     caption: "National Parks, Ancient Cities and Nature",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Wildlife',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/wildlife_2.png",
     itinerary: [
       {
         day: 1,
@@ -1437,7 +1437,7 @@ export const packagesData: Package[] = [
     caption: "Expereince Sri Lanka's Wildlife in the shortest possible time",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Wildlife',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/wildlife_3.png",
     itinerary: [
       {
         day: 1,
@@ -1522,7 +1522,7 @@ export const packagesData: Package[] = [
     caption: "Experience a week of Adventure in Sri Lanka",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Adventure',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/adventure_2(2).png",
     itinerary: [
       {
         day: 1,
@@ -1600,7 +1600,7 @@ export const packagesData: Package[] = [
     caption: "",
     description: "",
     category: 'Adventure',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/adventure_3.png",
     itinerary: [
       {
         day: 1,
@@ -1610,7 +1610,7 @@ export const packagesData: Package[] = [
       },
       {
         day: 2,
-        title: "kalpitiya Kite Surfing",
+        title: "Kalpitiya Kite Surfing",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
         icon: "✈️"
       },
@@ -1703,7 +1703,7 @@ export const packagesData: Package[] = [
     caption: "",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     category: 'Family',
-    mapImage: "/packages/maps/beach_1.png",
+    mapImage: "/packages/maps/family_2.png",
     itinerary: [
       {
         day: 1,
